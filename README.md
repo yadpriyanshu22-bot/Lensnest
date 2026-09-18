@@ -1,1 +1,3 @@
-# Lensnest
+# LensNest
+
+LensNest is an image-search app that will let users search for a topic and explore matching images in a responsive grid. I chose a dark green and cream colour palette to create a calm visual style that is different from typical image-search interfaces. I added quick-pick category chips so users can discover common topics easily. I also added an empty-state message so the results area clearly communicates what the user should do before any search is made.
