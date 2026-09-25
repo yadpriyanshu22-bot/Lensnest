@@ -1,5 +1,6 @@
 const form = document.getElementById("search-form");
 const input = document.getElementById("search-input");
+const status = document.getElementById("status");
 
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
@@ -8,24 +9,38 @@ form.addEventListener("submit", async (event) => {
 
     if (!query) return;
 
-    const url =
-        "https://commons.wikimedia.org/w/api.php?action=query" +
-        "&generator=search&gsrsearch=" + encodeURIComponent(query) +
-        "&gsrnamespace=6&gsrlimit=12" +
-        "&prop=imageinfo&iiprop=url&iiurlwidth=300" +
-        "&format=json&origin=*";
+    status.textContent = "Searching...";
 
-    const response = await fetch(url);
+    try {
+        const url =
+            "https://commons.wikimedia.org/w/api.php?action=query" +
+            "&generator=search&gsrsearch=" + encodeURIComponent(query) +
+            "&gsrnamespace=6&gsrlimit=12" +
+            "&prop=imageinfo&iiprop=url&iiurlwidth=300" +
+            "&format=json&origin=*";
 
-    if (!response.ok) {
-        throw new Error(response.status);
+        const response = await fetch(url);
+
+        if (!response.ok) {
+            throw new Error(response.status);
+        }
+
+        const data = await response.json();
+
+        const items = Object.values(data.query.pages);
+
+        if (items.length === 0) {
+            status.textContent = "No results. Try another search.";
+            render([]);
+        } else {
+            status.textContent = "Showing " + items.length + " results.";
+            render(items);
+        }
+
+    } catch (error) {
+        status.textContent = "Something went wrong. Please try again.";
+        document.getElementById("results").innerHTML = "";
     }
-
-    const data = await response.json();
-
-    const items = Object.values(data.query.pages);
-
-    render(items);
 });
 
 function render(items) {
