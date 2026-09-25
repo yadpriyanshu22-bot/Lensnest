@@ -1,6 +1,11 @@
 # LensNest
 
-# LensNest
+LensNest is a simple image-search web application that helps users
+discover images based on topics they are interested in.
+
+## Live Demo
+
+https://YOUR-USERNAME.github.io/LensNest/
 
 LensNest is an image-search app that lets users search for a topic and explore matching images in a responsive grid. The goal is to provide a simple, visually engaging way to discover images while keeping the interface easy to use on both desktop and mobile devices.
 ## Design Decisions
