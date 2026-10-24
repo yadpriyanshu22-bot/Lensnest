@@ -1,37 +1,77 @@
-# LensNest
+# 🌿 LensNest — Discover Images That Inspire
 
-LensNest is a simple image-search web application that helps users
-discover images based on topics they are interested in.
+**LensNest** is a clean, modern image-search web application that helps you explore visual inspiration from around the world. Search for your favorite topics, discover beautiful images, and browse results in a responsive, easy-to-use interface.
 
-## Live Demo
+🔗 **Live Demo:** [Explore LensNest](https://YOUR-USERNAME.github.io/LensNest/)
 
-https://YOUR-USERNAME.github.io/LensNest/
+## ✨ Features
 
-LensNest is an image-search app that lets users search for a topic and explore matching images in a responsive grid. The goal is to provide a simple, visually engaging way to discover images while keeping the interface easy to use on both desktop and mobile devices.
-## Design Decisions
+- 🔍 **Instant Image Discovery** — Search for images based on any topic or interest.
+- 🖼️ **Responsive Image Gallery** — Explore results in a flexible CSS Grid layout.
+- 🎯 **Quick-Pick Categories** — Start exploring popular topics with a single click.
+- 🌱 **Clean Empty State** — Get helpful guidance before performing your first search.
+- ✨ **Interactive Hover Effects** — Enjoy subtle animations and engaging image cards.
+- 📱 **Mobile-Friendly Design** — Browse comfortably on desktops, tablets, and smartphones.
+- ♿ **Accessible Search** — A thoughtfully designed search input for a more inclusive experience.
 
-I chose a **dark green and orange colour palette** to create a calm but distinctive visual style that is different from typical image-search interfaces. The rounded search bar and buttons make the interface simple and easy to use.
+## 🎨 Design Philosophy
 
-The image results are displayed using a **responsive CSS Grid**, allowing the layout to automatically adjust to different screen sizes. Image cards have rounded corners, shadows, and hover effects to make the results more interactive.
+LensNest combines a **deep green and vibrant orange** colour palette to create a distinctive visual identity.
 
-I also added **quick-pick category chips** so users can discover common topics easily without having to type a search immediately.
+- **Deep Green:** Creates a calm, natural, and immersive atmosphere.
+- **Vibrant Orange:** Adds warmth, energy, and contrast to important actions.
+- **Rounded UI Elements:** Keep the search bar, buttons, and image cards approachable and intuitive.
+- **Subtle Shadows & Hover Effects:** Add depth without distracting from the images.
+- **Responsive CSS Grid:** Automatically adapts the gallery to different screen sizes.
 
-An **empty-state message** is included in the results area to clearly tell users what to do before they perform their first search.
+The goal is simple: make image discovery feel effortless, engaging, and visually delightful.
 
-The layout is also designed to be **responsive**, so the app remains usable on both desktop and mobile devices.
+## 🛠️ Built With
 
-## Features
+| Technology | Purpose |
+|---|---|
+| HTML5 | Structures the application |
+| CSS3 | Powers the styling, animations, and responsive layout |
+| JavaScript | Handles search interactions and dynamic behaviour |
 
-* Search for images by topic
-* Responsive image grid
-* Quick-pick category chips
-* Empty-state message
-* Hover effects on images
-* Mobile-friendly layout
-* Accessible search input
+## 🚀 Getting Started
 
-## Technologies Used
+Run LensNest locally in just a few steps.
 
-* HTML
-* CSS
-* JavaScript
+**1. Clone the repository**
+
+```bash
+git clone https://github.com/YOUR-USERNAME/LensNest.git
+```
+**2. Open the project folder**
+
+```bash
+cd LensNest
+```
+
+**3. Launch the application**
+
+Open `index.html` in your browser, or use the **Live Server** extension in VS Code for a smoother development experience.
+
+## 📂 Project Structure
+
+
+*Your actual filenames may differ.*
+
+## 🌍 Live Preview
+
+Try the application here:
+
+👉 [LensNest — Live Demo](https://YOUR-USERNAME.github.io/LensNest/)
+
+> Replace `YOUR-USERNAME` with your GitHub username after deploying the project with GitHub Pages.
+
+## 💡 Why LensNest?
+
+The name **LensNest** combines the idea of a lens—a way to see the world—with a nest, a place to gather and explore ideas.
+
+Whether you're searching for nature, architecture, travel destinations, or creative inspiration, LensNest offers a simple starting point for visual discovery.
+
+---
+
+**Made with 💚 and a passion for beautiful visuals.**
