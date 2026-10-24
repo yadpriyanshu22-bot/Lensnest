@@ -53,19 +53,6 @@ cd LensNest
 
 Open `index.html` in your browser, or use the **Live Server** extension in VS Code for a smoother development experience.
 
-## 📂 Project Structure
-
-
-*Your actual filenames may differ.*
-
-## 🌍 Live Preview
-
-Try the application here:
-
-👉 [LensNest — Live Demo](https://YOUR-USERNAME.github.io/LensNest/)
-
-> Replace `YOUR-USERNAME` with your GitHub username after deploying the project with GitHub Pages.
-
 ## 💡 Why LensNest?
 
 The name **LensNest** combines the idea of a lens—a way to see the world—with a nest, a place to gather and explore ideas.
