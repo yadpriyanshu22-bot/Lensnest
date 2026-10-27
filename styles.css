@@ -72,6 +72,7 @@ header p {
   box-shadow: 0 10px 30px rgba(23, 59, 45, 0.12);
 }
 
+/* Accessible search label */
 #search-form label {
   position: absolute;
   width: 1px;
@@ -119,7 +120,9 @@ header p {
   font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
-  transition: background-color 0.25s, transform 0.25s,
+  transition:
+    background-color 0.25s,
+    transform 0.25s,
     box-shadow 0.25s;
 }
 
@@ -170,7 +173,7 @@ main::before {
   align-items: start;
 }
 
-/* Image elements */
+/* Gallery images */
 #results img {
   display: block;
   width: 100%;
@@ -179,7 +182,9 @@ main::before {
   border-radius: 14px;
   border: none;
   box-shadow: 0 5px 15px rgba(23, 59, 45, 0.12);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 #results img:hover {
@@ -187,7 +192,7 @@ main::before {
   box-shadow: 0 12px 25px rgba(23, 59, 45, 0.18);
 }
 
-/* Keep image captions readable if present */
+/* Image captions, if present */
 #results p,
 #results figcaption {
   color: var(--text);
@@ -195,7 +200,7 @@ main::before {
   line-height: 1.5;
 }
 
-/* Tablet */
+/* Tablet layout */
 @media (max-width: 800px) {
   header {
     padding: 35px 5% 20px;
@@ -224,7 +229,7 @@ main::before {
   }
 }
 
-/* Mobile */
+/* Mobile layout */
 @media (max-width: 600px) {
   header {
     padding: 30px 20px 20px;
