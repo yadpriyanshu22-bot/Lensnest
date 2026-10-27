@@ -1,4 +1,4 @@
-# 🌿 LensNest — Discover Images That Inspire
+# LensNest — Discover Images That Inspire
 
 LensNest is a responsive image-search web application that makes it easy to explore and discover images based on your interests. Whether you're looking for nature, travel, photography, or creative inspiration, LensNest offers a simple and engaging way to find visuals.
 
