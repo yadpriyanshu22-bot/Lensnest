@@ -1,37 +1,78 @@
-# LensNest
+# 🌿 LensNest — Discover Images That Inspire
 
-LensNest is a simple image-search web application that helps users
-discover images based on topics they are interested in.
+LensNest is a responsive image-search web application that makes it easy to explore and discover images based on your interests. Whether you're looking for nature, travel, photography, or creative inspiration, LensNest offers a simple and engaging way to find visuals.
 
-## Live Demo
+## 🌐 Live Demo
 
-https://YOUR-USERNAME.github.io/LensNest/
+[**Explore LensNest →**](https://YOUR-USERNAME.github.io/LensNest/)
 
-LensNest is an image-search app that lets users search for a topic and explore matching images in a responsive grid. The goal is to provide a simple, visually engaging way to discover images while keeping the interface easy to use on both desktop and mobile devices.
-## Design Decisions
+## ✨ Features
 
-I chose a **dark green and orange colour palette** to create a calm but distinctive visual style that is different from typical image-search interfaces. The rounded search bar and buttons make the interface simple and easy to use.
+- 🔍 **Image Search** — Find images based on your favorite topics.
+- 🖼️ **Responsive Image Grid** — Browse results in a flexible, adaptive layout.
+- 🏷️ **Quick-Pick Categories** — Explore popular topics with a single click.
+- 🎨 **Modern UI** — Enjoy a distinctive dark green and orange color palette.
+- ✨ **Interactive Image Cards** — Smooth hover effects, rounded corners, and subtle shadows.
+- 📱 **Mobile-Friendly Design** — A seamless experience across desktop, tablet, and mobile devices.
+- 💡 **Empty State** — Clear guidance before the first search.
+- ♿ **Accessible Search** — A user-friendly search input designed with accessibility in mind.
 
-The image results are displayed using a **responsive CSS Grid**, allowing the layout to automatically adjust to different screen sizes. Image cards have rounded corners, shadows, and hover effects to make the results more interactive.
+## 🎨 Design Approach
 
-I also added **quick-pick category chips** so users can discover common topics easily without having to type a search immediately.
+LensNest combines a deep green background with warm orange accents to create a distinctive visual identity. The rounded search bar, clean spacing, and subtle shadows keep the interface modern without making it feel cluttered.
 
-An **empty-state message** is included in the results area to clearly tell users what to do before they perform their first search.
+The responsive CSS Grid automatically adapts the image layout to different screen sizes, while interactive image cards and quick-pick category chips make image discovery more engaging.
 
-The layout is also designed to be **responsive**, so the app remains usable on both desktop and mobile devices.
+The overall goal is simple: **make finding visual inspiration feel effortless.**
 
-## Features
+## 🛠️ Built With
 
-* Search for images by topic
-* Responsive image grid
-* Quick-pick category chips
-* Empty-state message
-* Hover effects on images
-* Mobile-friendly layout
-* Accessible search input
+- **HTML5** — Page structure and semantic markup
+- **CSS3** — Styling, responsive layouts, and hover animations
+- **JavaScript** — Search functionality and interactive elements
 
-## Technologies Used
+## 🚀 Run Locally
 
-* HTML
-* CSS
-* JavaScript
+Want to explore the project on your own machine?
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/yadpriyanshu22-bot/Lensnest.git
+   ```
+
+2. Open the project folder:
+
+   ```bash
+   cd Lensnest
+   ```
+
+3. Open the folder in Visual Studio Code:
+
+   ```bash
+   code .
+   ```
+
+4. Open `index.html` using the **Live Server** extension, or open the file directly in your browser.
+
+## 📂 Project Structure
+
+```text
+Lensnest/
+├── index.html
+├── style.css
+├── script.js
+└── README.md
+```
+
+*Note: Update this structure if your repository uses different filenames or folders.*
+
+## 🎯 Project Goal
+
+LensNest was created to practice front-end web development while building a visually appealing, responsive, and interactive application. It brings together layout design, styling, and JavaScript functionality in one simple project.
+
+---
+
+**Made with 🌿 and ☀️ by [Priyanshu Yadav](https://github.com/yadpriyanshu22-bot)**
+
+*Discover more. Get inspired. Explore with LensNest.*
