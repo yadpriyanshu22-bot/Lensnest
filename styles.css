@@ -1,10 +1,12 @@
+
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Color palette */
+/* LensNest color palette */
 :root {
   --background: #f5efe3;
   --green: #173b2d;
@@ -17,17 +19,21 @@
   --white: #ffffff;
 }
 
-/* Body */
+/* Page */
+html {
+  min-height: 100%;
+}
+
 body {
-  font-family: Arial, sans-serif;
-  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--background) !important;
   color: var(--text);
   min-height: 100vh;
 }
 
-/* Header: centered heading and search bar */
+/* Header */
 header {
-  background: var(--background);
+  background-color: var(--background) !important;
   color: var(--green);
   padding: 45px 7% 25px;
   display: flex;
@@ -40,29 +46,30 @@ header {
 
 /* Website title */
 header h1 {
+  color: var(--green);
   font-size: 58px;
-  font-weight: bold;
+  font-weight: 700;
   letter-spacing: -1px;
   margin-bottom: 8px;
 }
 
 header p {
+  color: #526c5b;
   font-size: 20px;
   line-height: 1.5;
-  color: #526c5b;
 }
 
-/* Search area */
+/* Search form */
 #search-form {
-  width: min(800px, 100%);
-  background: var(--white);
-  padding: 8px 10px 8px 20px;
+  width: min(100%, 1000px);
+  background-color: var(--white);
+  padding: 8px 10px 8px 24px;
   border: 1px solid #edf0e8;
   border-radius: 50px;
   display: flex;
   align-items: center;
-  gap: 10px;
-  box-shadow: 0 8px 28px rgba(23, 59, 45, 0.12);
+  gap: 12px;
+  box-shadow: 0 10px 30px rgba(23, 59, 45, 0.12);
 }
 
 #search-form label {
@@ -85,9 +92,11 @@ header p {
   padding: 15px 12px;
   border: none;
   outline: none;
-  background: transparent;
+  background-color: transparent;
   color: var(--text);
+  font-family: inherit;
   font-size: 17px;
+  border-radius: 10px;
 }
 
 #search-input::placeholder {
@@ -103,18 +112,19 @@ header p {
   padding: 16px 32px;
   border: none;
   border-radius: 35px;
-  background: var(--orange);
+  background-color: var(--orange);
   color: #17291f;
+  font-family: inherit;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   white-space: nowrap;
-  transition: background 0.25s, transform 0.25s,
+  transition: background-color 0.25s, transform 0.25s,
     box-shadow 0.25s;
 }
 
 #search-button:hover {
-  background: var(--orange-hover);
+  background-color: var(--orange-hover);
   transform: translateY(-2px);
   box-shadow: 0 5px 12px rgba(242, 140, 40, 0.25);
 }
@@ -126,23 +136,25 @@ header p {
 
 /* Main content */
 main {
+  width: 100%;
   max-width: 1500px;
   margin: 0 auto;
   padding: 30px 5% 55px;
+  background-color: var(--background);
 }
 
 /* Discover Images heading */
 main::before {
   content: "Discover Images";
   display: block;
-  font-size: 36px;
-  font-weight: bold;
   color: var(--green);
+  font-size: 36px;
+  font-weight: 700;
   text-align: center;
   margin-bottom: 28px;
 }
 
-/* Search status */
+/* Search status message */
 #status {
   color: var(--muted);
   margin-bottom: 30px;
@@ -154,19 +166,20 @@ main::before {
 #results {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 22px;
+  gap: 24px 28px;
+  align-items: start;
 }
 
-/* Image cards */
+/* Image elements */
 #results img {
   display: block;
   width: 100%;
-  height: 200px;
+  height: 250px;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 14px;
   border: none;
-  box-shadow: 0 5px 15px rgba(23, 59, 45, 0.10);
-  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 5px 15px rgba(23, 59, 45, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 #results img:hover {
@@ -174,7 +187,15 @@ main::before {
   box-shadow: 0 12px 25px rgba(23, 59, 45, 0.18);
 }
 
-/* Tablet layout */
+/* Keep image captions readable if present */
+#results p,
+#results figcaption {
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+/* Tablet */
 @media (max-width: 800px) {
   header {
     padding: 35px 5% 20px;
@@ -195,10 +216,15 @@ main::before {
 
   #results {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  #results img {
+    height: 220px;
   }
 }
 
-/* Mobile layout */
+/* Mobile */
 @media (max-width: 600px) {
   header {
     padding: 30px 20px 20px;
@@ -239,7 +265,7 @@ main::before {
 
   #results {
     grid-template-columns: 1fr;
-    gap: 18px;
+    gap: 20px;
   }
 
   #results img {
