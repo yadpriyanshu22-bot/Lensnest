@@ -64,15 +64,3 @@ Lensnest/
 ├── script.js
 └── README.md
 ```
-
-*Note: Update this structure if your repository uses different filenames or folders.*
-
-## 🎯 Project Goal
-
-LensNest was created to practice front-end web development while building a visually appealing, responsive, and interactive application. It brings together layout design, styling, and JavaScript functionality in one simple project.
-
----
-
-**Made with 🌿 and ☀️ by [Priyanshu Yadav](https://github.com/yadpriyanshu22-bot)**
-
-*Discover more. Get inspired. Explore with LensNest.*
