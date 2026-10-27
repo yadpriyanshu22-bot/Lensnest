@@ -7,13 +7,13 @@
 }
 
 :root {
-  --background: #f5f7f1;
+  --background: #127bec;
   --green: #173b2d;
   --green-dark: #102b21;
-  --green-light: #e1eadb;
+  --green-light: #dfeadd;
   --orange: #f28c28;
   --orange-hover: #ffab52;
-  --text: #304438;
+  --text: #24372c;
   --muted: #718477;
   --white: #ffffff;
 }
