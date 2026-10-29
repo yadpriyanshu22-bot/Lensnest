@@ -6,41 +6,7 @@ const results = document.getElementById("results");
 const statusText = document.getElementById("status");
 const categoryButtons = document.querySelectorAll(".categories button");
 
-// Sample images displayed when the page opens
-const sampleImages = [
-  {
-    title: "Sunlight Through the Forest",
-    category: "nature",
-    url: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=700&q=80"
-  },
-  {
-    title: "Mountain Lake",
-    category: "travel",
-    url: "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80"
-  },
-  {
-    title: "Modern Architecture",
-    category: "architecture",
-    url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=700&q=80"
-  },
-  {
-    title: "Golden Sunset",
-    category: "nature",
-    url: "https://images.unsplash.com/photo-1472120435266-53107fd0c44a?auto=format&fit=crop&w=700&q=80"
-  },
-  {
-    title: "Beautiful Flowers",
-    category: "nature",
-    url: "https://images.unsplash.com/photo-1490750967868-88aa4486c946?auto=format&fit=crop&w=700&q=80"
-  },
-  {
-    title: "Turquoise Ocean",
-    category: "travel",
-    url: "https://images.unsplash.com/photo-1518837695005-2083093ee35b?auto=format&fit=crop&w=700&q=80"
-  }
-];
-
-// Create an image card safely
+// Create an image card
 function createImageCard(image) {
   const card = document.createElement("article");
   card.className = "image-card";
@@ -78,7 +44,7 @@ function createImageCard(image) {
   return card;
 }
 
-// Display images in the gallery
+// Display search results
 function showImages(images) {
   results.replaceChildren();
 
@@ -96,7 +62,7 @@ function showImages(images) {
   results.appendChild(fragment);
 }
 
-// Show a message in the gallery
+// Display a message
 function showMessage(message) {
   results.replaceChildren();
 
@@ -107,28 +73,34 @@ function showMessage(message) {
   results.appendChild(element);
 }
 
-// Mark the selected category
+// Highlight the selected category
 function setActiveCategory(query) {
   categoryButtons.forEach((button) => {
-    const active = button.dataset.query === query.toLowerCase();
+    const active =
+      button.dataset.query === query.toLowerCase();
+
     button.classList.toggle("active", active);
   });
 }
 
-// Search Wikimedia Commons for images
+// Search Wikimedia Commons
 async function searchImages(query) {
   const searchTerm = query.trim();
 
   if (!searchTerm) {
     input.focus();
-    statusText.textContent = "Please enter something to search for.";
+    statusText.textContent =
+      "Please enter something to search for.";
     return;
   }
 
   setActiveCategory(searchTerm);
+
   searchButton.disabled = true;
   searchButton.textContent = "Searching...";
-  statusText.textContent = `Searching for "${searchTerm}"...`;
+
+  statusText.textContent =
+    `Searching for "${searchTerm}"...`;
 
   showMessage("Finding images for you...");
 
@@ -152,14 +124,22 @@ async function searchImages(query) {
     const response = await fetch(apiUrl);
 
     if (!response.ok) {
-      throw new Error("The image service could not be reached.");
+      throw new Error(
+        "The image service could not be reached."
+      );
     }
 
     const data = await response.json();
-    const pages = Object.values(data.query?.pages || {});
+    const pages = Object.values(
+      data.query?.pages || {}
+    );
 
     const images = pages
-      .filter((page) => page.imageinfo && page.imageinfo.length > 0)
+      .filter(
+        (page) =>
+          page.imageinfo &&
+          page.imageinfo.length > 0
+      )
       .map((page) => ({
         title: page.title.replace(/^File:/, ""),
         url:
@@ -170,8 +150,12 @@ async function searchImages(query) {
       }));
 
     if (images.length === 0) {
-      statusText.textContent = `No results found for "${searchTerm}".`;
-      showMessage("Try another keyword, such as nature, cars, or flowers.");
+      statusText.textContent =
+        `No results found for "${searchTerm}".`;
+
+      showMessage(
+        "Try another keyword, such as nature, cars, or flowers."
+      );
     } else {
       statusText.textContent =
         `Showing ${images.length} results for "${searchTerm}".`;
@@ -181,9 +165,11 @@ async function searchImages(query) {
   } catch (error) {
     console.error("Image search failed:", error);
 
-    statusText.textContent = "Image search couldn't connect.";
+    statusText.textContent =
+      "Image search couldn't connect.";
+
     showMessage(
-      "Please check your internet connection and try searching again."
+      "Please check your internet connection and try again."
     );
   } finally {
     searchButton.disabled = false;
@@ -191,13 +177,13 @@ async function searchImages(query) {
   }
 }
 
-// Handle form submission
+// Handle search form submission
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   searchImages(input.value);
 });
 
-// Make category buttons perform searches
+// Make category buttons work
 categoryButtons.forEach((button) => {
   button.addEventListener("click", () => {
     const query = button.dataset.query;
@@ -206,6 +192,8 @@ categoryButtons.forEach((button) => {
   });
 });
 
-// Show sample images on page load
-showImages(sampleImages);
-statusText.textContent = "Explore our collection or search for more images.";
+// Start with an empty gallery — no default images
+results.replaceChildren();
+
+statusText.textContent =
+  "Search for something you love to discover images.";
